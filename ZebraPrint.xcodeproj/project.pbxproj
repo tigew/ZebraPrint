@@ -6,14 +6,68 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXCopyFilesBuildPhase section */
+		69AEF7C02DE5A8CA00524DBB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		69AEF78E2DE5A0DF00524DBB /* Zebra Print.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zebra Print.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69AEF78E2DE5A0DF00524DBB /* ZebraPrint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZebraPrint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		6976A54A2DE5AD7B000BDB09 /* Exceptions for "Bridge" folder in "Copy Bundle Resources" phase from "ZebraPrint" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 69AEF78C2DE5A0DF00524DBB /* Resources */;
+			membershipExceptions = (
+				ZebraBridge.h,
+			);
+		};
+		69AEF7C22DE5A8F000524DBB /* Exceptions for "ZebraPrint" folder in "Embed Frameworks" phase from "ZebraPrint" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				ZSDK_API.xcframework = (CodeSignOnCopy, RemoveHeadersOnCopy, );
+			};
+			buildPhase = 69AEF7C02DE5A8CA00524DBB /* Embed Frameworks */;
+			membershipExceptions = (
+				ZSDK_API.xcframework,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		69AEF7902DE5A0DF00524DBB /* Zebra Print */ = {
+		69AEF7902DE5A0DF00524DBB /* ZebraPrint */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Zebra Print";
+			exceptions = (
+				69AEF7C22DE5A8F000524DBB /* Exceptions for "ZebraPrint" folder in "Embed Frameworks" phase from "ZebraPrint" target */,
+			);
+			path = ZebraPrint;
+			sourceTree = "<group>";
+		};
+		69AEF79E2DE5A13200524DBB /* Bridge */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6976A54A2DE5AD7B000BDB09 /* Exceptions for "Bridge" folder in "Copy Bundle Resources" phase from "ZebraPrint" target */,
+			);
+			path = Bridge;
+			sourceTree = "<group>";
+		};
+		69AEF7BA2DE5A33700524DBB /* Headers */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		69AEF7BD2DE5A83400524DBB /* Frameworks */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +86,10 @@
 		69AEF7852DE5A0DF00524DBB = {
 			isa = PBXGroup;
 			children = (
-				69AEF7902DE5A0DF00524DBB /* Zebra Print */,
+				69AEF7BD2DE5A83400524DBB /* Frameworks */,
+				69AEF7BA2DE5A33700524DBB /* Headers */,
+				69AEF79E2DE5A13200524DBB /* Bridge */,
+				69AEF7902DE5A0DF00524DBB /* ZebraPrint */,
 				69AEF78F2DE5A0DF00524DBB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,7 +97,7 @@
 		69AEF78F2DE5A0DF00524DBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				69AEF78E2DE5A0DF00524DBB /* Zebra Print.app */,
+				69AEF78E2DE5A0DF00524DBB /* ZebraPrint.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,26 +105,30 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		69AEF78D2DE5A0DF00524DBB /* Zebra Print */ = {
+		69AEF78D2DE5A0DF00524DBB /* ZebraPrint */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 69AEF7992DE5A0E100524DBB /* Build configuration list for PBXNativeTarget "Zebra Print" */;
+			buildConfigurationList = 69AEF7992DE5A0E100524DBB /* Build configuration list for PBXNativeTarget "ZebraPrint" */;
 			buildPhases = (
 				69AEF78A2DE5A0DF00524DBB /* Sources */,
 				69AEF78B2DE5A0DF00524DBB /* Frameworks */,
 				69AEF78C2DE5A0DF00524DBB /* Resources */,
+				69AEF7C02DE5A8CA00524DBB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				69AEF7902DE5A0DF00524DBB /* Zebra Print */,
+				69AEF7902DE5A0DF00524DBB /* ZebraPrint */,
+				69AEF79E2DE5A13200524DBB /* Bridge */,
+				69AEF7BA2DE5A33700524DBB /* Headers */,
+				69AEF7BD2DE5A83400524DBB /* Frameworks */,
 			);
-			name = "Zebra Print";
+			name = ZebraPrint;
 			packageProductDependencies = (
 			);
 			productName = "Zebra Print";
-			productReference = 69AEF78E2DE5A0DF00524DBB /* Zebra Print.app */;
+			productReference = 69AEF78E2DE5A0DF00524DBB /* ZebraPrint.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +146,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 69AEF7892DE5A0DF00524DBB /* Build configuration list for PBXProject "Zebra Print" */;
+			buildConfigurationList = 69AEF7892DE5A0DF00524DBB /* Build configuration list for PBXProject "ZebraPrint" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +160,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				69AEF78D2DE5A0DF00524DBB /* Zebra Print */,
+				69AEF78D2DE5A0DF00524DBB /* ZebraPrint */,
 			);
 		};
 /* End PBXProject section */
@@ -129,6 +190,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLY_RULES_IN_COPY_HEADERS = YES;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -193,6 +255,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLY_RULES_IN_COPY_HEADERS = YES;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -249,13 +312,26 @@
 		69AEF79A2DE5A0E100524DBB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLY_RULES_IN_COPY_HEADERS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2Z88C82TDQ;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ZebraPrint/ZSDK_API.xcframework/ios-arm64/Headers/**",
+					"$(PROJECT_DIR)/ZebraPrint/ZSDK_API.xcframework/**",
+					"$(PROJECT_DIR)/ZebraPrint/**",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ZSDK_API.xcframework/ios-arm64/Headers",
+					"$(PROJECT_DIR)/Frameworks/ZSDK_API.xcframework/ios-arm64/Headers/**",
+					"$(PROJECT_DIR)/**",
+				);
+				INFOPLIST_FILE = "Zebra-Print-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -268,7 +344,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "family.peebles.Zebra-Print";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = Bridge/ZebraBridge.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -277,13 +355,26 @@
 		69AEF79B2DE5A0E100524DBB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLY_RULES_IN_COPY_HEADERS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2Z88C82TDQ;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ZebraPrint/ZSDK_API.xcframework/ios-arm64/Headers/**",
+					"$(PROJECT_DIR)/ZebraPrint/ZSDK_API.xcframework/**",
+					"$(PROJECT_DIR)/ZebraPrint/**",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ZSDK_API.xcframework/ios-arm64/Headers",
+					"$(PROJECT_DIR)/Frameworks/ZSDK_API.xcframework/ios-arm64/Headers/**",
+					"$(PROJECT_DIR)/**",
+				);
+				INFOPLIST_FILE = "Zebra-Print-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -296,7 +387,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "family.peebles.Zebra-Print";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = Bridge/ZebraBridge.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -305,7 +398,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		69AEF7892DE5A0DF00524DBB /* Build configuration list for PBXProject "Zebra Print" */ = {
+		69AEF7892DE5A0DF00524DBB /* Build configuration list for PBXProject "ZebraPrint" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				69AEF7972DE5A0E100524DBB /* Debug */,
@@ -314,7 +407,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		69AEF7992DE5A0E100524DBB /* Build configuration list for PBXNativeTarget "Zebra Print" */ = {
+		69AEF7992DE5A0E100524DBB /* Build configuration list for PBXNativeTarget "ZebraPrint" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				69AEF79A2DE5A0E100524DBB /* Debug */,
